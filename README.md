@@ -6,7 +6,7 @@ The Northwind database is an excellent tutorial schema for a small-business ERP,
 
 This is the simple database released for Access 95-2003.
 
-![The Original ERD](https://user-images.githubusercontent.com/8201918/145674140-99c67ea4-8937-4078-9246-0b55fd4fa865.png)
+![The Original ERD](https://user-images.githubusercontent.com/8201918/172254022-552a5918-06c0-40ff-b655-bb6128493c21.png)
 
 Microsoft has gradually enhanced Northwind (and recently deprecated it, although it is quite forward-compatible).
 
