@@ -12,7 +12,7 @@ Microsoft has gradually enhanced Northwind (and recently deprecated it, although
 
 For this project we will use a schema quite different to the earlier versions that was released with Office 2007.
 
-![Northwind 2007 Schema](https://user-images.githubusercontent.com/8201918/145703504-2c88b1bf-8446-420f-a715-8507b786042e.png)
+![Northwind 2007 Schema](https://user-images.githubusercontent.com/8201918/172254125-ca325994-e9df-48a1-af1c-2fb093932f15.png)
 
 ### Developer
 [Masitano Sichone](https://github.com/MSichone)
