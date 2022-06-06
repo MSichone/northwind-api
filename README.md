@@ -1,4 +1,4 @@
-# northwind-spring-data-jpa
+# northwind-api
 A Spring Boot project to recreate the Northwind database that was originally created by Microsoft and used as the basis for their tutorials in a variety of database products for decades.
 
 ### About
