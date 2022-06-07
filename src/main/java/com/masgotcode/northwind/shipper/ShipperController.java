@@ -1,5 +1,6 @@
 package com.masgotcode.northwind.shipper;
 
+import io.swagger.v3.oas.annotations.Operation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,7 @@ public class ShipperController {
         this.shipperService = shipperService;
     }
 
+    @Operation(summary = "Get all shippers")
     @GetMapping("all")
     public Iterable<Shipper> getAllShippers(){
         log.info("ShipperController.getAllShippers");
