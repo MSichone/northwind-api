@@ -5,6 +5,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class CustomerService {
     private final Logger log = LoggerFactory.getLogger(CustomerService.class);
@@ -19,5 +21,10 @@ public class CustomerService {
     public Iterable<Customer> getAllCustomers(){
         log.info("CustomerService.getAllCustomers");
         return customerRepository.findAll();
+    }
+
+    public Optional<Customer> getCustomerById(Long id){
+        log.info("CustomerService.getCustomerById["+id+"]");
+        return customerRepository.findById(id);
     }
 }

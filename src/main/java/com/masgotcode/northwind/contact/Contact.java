@@ -5,12 +5,13 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Data
-@Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+/*@Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)*/
+@MappedSuperclass
 public abstract class Contact {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Long id;
+    private Long id;
     @Column
     private String company;
     @Column
