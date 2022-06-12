@@ -8,4 +8,5 @@ import javax.persistence.*;
 @Entity(name = "Customer")
 @Table(name = "customers")
 public class Customer extends Contact {
+
 }

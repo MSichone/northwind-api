@@ -5,8 +5,6 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Data
-/*@Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)*/
 @MappedSuperclass
 public abstract class Contact {
     @Id
@@ -44,4 +42,5 @@ public abstract class Contact {
     private String webPage;
     @Column
     private String notes;
+
 }
