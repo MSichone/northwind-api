@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.masgotcode</groupId>
 	<artifactId>northwind</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>northwind</name>
 	<description>A Spring Boot project to recreate the Northwind database that was originally created by Microsoft and used as the basis for their tutorials in a variety of database products for decades.</description>
 	<properties>

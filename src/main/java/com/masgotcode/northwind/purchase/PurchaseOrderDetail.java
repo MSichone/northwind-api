@@ -18,6 +18,8 @@ public class PurchaseOrderDetail {
     @ManyToOne
     private InventoryTransaction inventory;
 
+    //@JoinColumn(name="purchase_order_id", insertable=false, updatable=false, nullable=false)
+
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     private PurchaseOrder purchaseOrder;
@@ -32,4 +34,9 @@ public class PurchaseOrderDetail {
     private LocalDateTime dateReceived;
     @Column(columnDefinition = "bit default 0")
     private boolean postedToInventory;
+
+    // Added to Fix org.hibernate.loader.MultipleBagFetchException
+    //@Column(columnDefinition = "NOT NULL DEFAULT 0")
+    @Column
+    private int position;
 }

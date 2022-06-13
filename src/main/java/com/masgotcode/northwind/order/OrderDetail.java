@@ -7,9 +7,9 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Data
-@Entity(name = "OrderDetails")
+@Entity(name = "OrderDetail")
 @Table(name = "order_details")
-public class OrderDetails {
+public class OrderDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -25,7 +25,7 @@ public class OrderDetails {
     @ManyToOne(fetch = FetchType.LAZY)
     private Orders order;
     @ManyToOne
-    private OrderDetailsStatus status;
+    private OrderDetailStatus status;
     @Column
     private LocalDateTime dateAllocated;
     @Column

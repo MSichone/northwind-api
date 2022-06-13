@@ -62,9 +62,9 @@ public class Orders {
             cascade = CascadeType.ALL,
             orphanRemoval = true
     )
-    List<OrderDetails> orderDetails = new ArrayList<>();
+    List<OrderDetail> orderDetails = new ArrayList<>();
 
-    public void addLineItem(OrderDetails lineItem){
+    public void addLineItem(OrderDetail lineItem){
         orderDetails.add(lineItem);
         lineItem.setOrder(this);
     }

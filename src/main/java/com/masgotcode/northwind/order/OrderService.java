@@ -12,15 +12,15 @@ public class OrderService {
     private Logger log = LoggerFactory.getLogger(OrderService.class);
 
     private final OrdersRepository ordersRepository;
-    private final OrderDetailsRepository orderDetailsRepository;
-    private final OrderDetailsStatusRepository orderDetailsStatusRepository;
+    private final OrderDetailRepository orderDetailRepository;
+    private final OrderDetailStatusRepository orderDetailStatusRepository;
     private final OrderStatusRepository orderStatusRepository;
     private final OrderTaxStatusRepository orderTaxStatusRepository;
 
-    public OrderService(OrdersRepository ordersRepository, OrderDetailsRepository orderDetailsRepository, OrderDetailsStatusRepository orderDetailsStatusRepository, OrderStatusRepository orderStatusRepository, OrderTaxStatusRepository orderTaxStatusRepository) {
+    public OrderService(OrdersRepository ordersRepository, OrderDetailRepository orderDetailRepository, OrderDetailStatusRepository orderDetailStatusRepository, OrderStatusRepository orderStatusRepository, OrderTaxStatusRepository orderTaxStatusRepository) {
         this.ordersRepository = ordersRepository;
-        this.orderDetailsRepository = orderDetailsRepository;
-        this.orderDetailsStatusRepository = orderDetailsStatusRepository;
+        this.orderDetailRepository = orderDetailRepository;
+        this.orderDetailStatusRepository = orderDetailStatusRepository;
         this.orderStatusRepository = orderStatusRepository;
         this.orderTaxStatusRepository = orderTaxStatusRepository;
     }
