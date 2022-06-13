@@ -14,10 +14,10 @@ For this project we will use a schema quite different to the earlier versions th
 
 ![Northwind 2010 Schema](https://user-images.githubusercontent.com/8201918/172254125-ca325994-e9df-48a1-af1c-2fb093932f15.png)
 
-### Developer
+## Developer
 [Masitano Sichone](https://github.com/MSichone)
 
-### Built With
+## Built With
 
 The application is built with Java and uses Maven for its dependency management.
 
@@ -29,7 +29,7 @@ The following frameworks and libraries are used.
 [H2](https://www.h2database.com/)
 
 
-### Database
+## Database
 Microsoft provided a dataset of 17 tables for the newer schema consisting of
 
 No |  Table  | Records
@@ -67,7 +67,7 @@ For demo purposes, I've decided to use an embedded database called [H2](https://
 
 H2 database has an embedded GUI console for browsing the contents of a database and running SQL queries. I've enabled it with this `spring.h2.console.enabled=true` entry in the **application.properties** file and you can access this GUI from your browser at [http://localhost:8080/h2-console/](http://localhost:8080/h2-console) 
 
-### Springifying Northwind Traders
+## Springifying Northwind Traders
 
 ## API
 
