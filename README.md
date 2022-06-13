@@ -25,9 +25,9 @@ The following frameworks and libraries are used.
 
 [Spring Boot](https://spring.io/projects/spring-boot)  
 [Spring Data](https://spring.io/projects/spring-data)  
-[Lombok](https://projectlombok.org/)
-[H2](https://www.h2database.com/)
-[springdoc-openapi](https://springdoc.org/)
+[Lombok](https://projectlombok.org/)  
+[H2](https://www.h2database.com/)  
+[springdoc-openapi](https://springdoc.org/)  
 
 
 ## Database
@@ -69,6 +69,13 @@ For demo purposes, I've decided to use an embedded database called [H2](https://
 H2 database has an embedded GUI console for browsing the contents of a database and running SQL queries. I've enabled it with this `spring.h2.console.enabled=true` entry in the **application.properties** file and you can access this GUI from your browser at [http://localhost:8080/h2-console/](http://localhost:8080/h2-console) 
 
 ## Springifying Northwind Traders
+
+### Class Inheritance
+From the schema you can see that the entity's **Employees, Customers,Suppliers, Shippers** have the following attributes in common. **Company, Lastname, Firstname, E-mail Address, Job Title, Business, Home and Mobile Phone, Fax Number, Address, City, State/Province, ZIP/Postal Code, Country, Web Page and Notes**. Sadly, relational databases don't have a straightforward way to map class hierarchies onto database tables but thank God for Spring, JPA Specification to be precise.
+
+I have used the `MappedSuperclass` strategy to share common attributes and methods via a new entity called **Contact** as a parent class. This Entity is given the `@MappedSuperclass` annotation instead of the `@Entity` while the **Employees, Customers,Suppliers, Shippers** entities become subclasses extending it.
+
+In this strategy inheritance is only evident in the class but not the entity model so **Contact** is not persisted to the database.
 
 
 ## API
