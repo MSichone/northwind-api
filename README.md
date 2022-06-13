@@ -27,6 +27,7 @@ The following frameworks and libraries are used.
 [Spring Data](https://spring.io/projects/spring-data)  
 [Lombok](https://projectlombok.org/)
 [H2](https://www.h2database.com/)
+[springdoc-openapi](https://springdoc.org/)
 
 
 ## Database
@@ -69,7 +70,16 @@ H2 database has an embedded GUI console for browsing the contents of a database 
 
 ## Springifying Northwind Traders
 
+
 ## API
+As I intend to build a UI for this project and have a Restful API exposed to more easily share this excellent tutorial schema, I use the [springdoc-openapi](https://springdoc.org/) java library to automate the generation of API documentation. This ensures the API documentation is informative, readable and most importantly that it simultaneously describes every change I make. The library works by examining the application at runtime to infer API semantics based on spring configurations, class structure and various annotations that I have used. The library is added as project dependency and the two entries below in the **application.properties** file ensure that
+1. you can access a JSON/YAML version of the documentation at [http://localhost:8080/api/documentation](http://localhost:8080/api/documentation) and
+2. an HTML format at [http://localhost:8080/api/documentation.html](http://localhost:8080/api/documentation.html) 
+
+```
+springdoc.api-docs.path=/api/documentation
+springdoc.swagger-ui.path=/api/documentation.html
+```
 
 ### Credits   
 
