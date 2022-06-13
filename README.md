@@ -1,4 +1,4 @@
-# northwind-api
+# Northwind-API
 A Spring Boot project to recreate the Northwind database that was originally created by Microsoft and used as the basis for their tutorials in a variety of database products for decades.
 
 ### About
@@ -25,7 +25,8 @@ The following frameworks and libraries are used.
 
 [Spring Boot](https://spring.io/projects/spring-boot)  
 [Spring Data](https://spring.io/projects/spring-data)  
-[Lombok](https://projectlombok.org/) 
+[Lombok](https://projectlombok.org/)
+[H2](https://www.h2database.com/)
 
 
 ### Database
@@ -54,17 +55,22 @@ No |  Table  | Records
 In this project I use [Dalers - MyWind](https://github.com/dalers/mywind) SQL data script that he converted from the 2010 access database.
 
 This script populates tables that are automatically created from corresponding Java entities by Spring Data JPA (Hibernate). The two entries below in the **application.properties** file ensure that
-1. database entity tables are always being recreated at startup and 
-2. the **data.sql** file with the table data is ran after the automatic schema-generation.
+1. database schema (entity tables) are always being recreated at startup and 
+2. the **data.sql** file in the classpath with the table data is ran after the automatic schema-generation.
 
 ```
 spring.jpa.hibernate.ddl-auto = create-drop
 spring.jpa.defer-datasource-initialization = true
 ```
 
-For demo purposes, I've decided to use an embedded database called [H2](https://www.h2database.com/). You could easily change the `database-platform` & `datasource` to your preferred database from with the **application.properties** file.
+For demo purposes, I've decided to use an embedded database called [H2](https://www.h2database.com/). You could easily change the `database-platform` & `datasource` to your preferred SQL database from with the **application.properties** file.
 
 H2 database has an embedded GUI console for browsing the contents of a database and running SQL queries. I've enabled it with this `spring.h2.console.enabled=true` entry in the **application.properties** file and you can access this GUI from your browser at [http://localhost:8080/h2-console/](http://localhost:8080/h2-console) 
+
+### Springifying Northwind Traders
+
+## API
+
 ### Credits   
 
 [Dalers - MyWind](https://github.com/dalers/mywind) - SQL version of the 2010 Microsoft Access Database
