@@ -538,3 +538,12 @@ INSERT INTO `invoices` (`id`, `order_id`, `invoice_date`, `due_date`, `tax`, `sh
 */
 
 INSERT INTO `privileges` (`id`, `privilege_name`) VALUES (2, 'Purchase Approvals');
+
+
+/*CREATE PROCEDURE FIND_INVENTORY_SOLD()
+BEGIN
+SELECT inventory_transactions.product_id,inventory_transactions.product_id, Sum(inventory_transactions.quantity) AS quantity_sold
+FROM inventory_transactions
+WHERE inventory_transactions.transaction_type=2
+GROUP BY inventory_transactions.product_id;
+END*/

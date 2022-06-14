@@ -10,7 +10,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Data
-@Entity(name = "inventory")
+@Entity(name = "InventoryTransaction")
 @Table(name = "inventory_transactions")
 public class InventoryTransaction {
     @Id
