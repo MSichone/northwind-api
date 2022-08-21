@@ -43,4 +43,8 @@ public abstract class Contact {
     @Column
     private String notes;
 
+
+    public String getFullName() {
+        return firstName + " " + lastName;
+    }
 }

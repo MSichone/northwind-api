@@ -28,18 +28,26 @@ public class OrderController {
     private final EmployeeService employeeService;
     private final ShipperService shipperService;
 
+    private final OrderService orderService;
     @Autowired
-    public OrderController(OrdersRepository ordersRepository, CustomerService customerService, EmployeeService employeeService, SupplierService supplierService, ShipperService shipperService) {
+    public OrderController(OrdersRepository ordersRepository, CustomerService customerService, EmployeeService employeeService, SupplierService supplierService, ShipperService shipperService, OrderService orderService) {
         this.ordersRepository = ordersRepository;
         this.customerService = customerService;
         this.employeeService = employeeService;
         this.shipperService = shipperService;
+        this.orderService = orderService;
     }
 
     @GetMapping("all")
     public Iterable<Orders> getAllOrders(){
         log.info("OrdersController.getAllOrders");
         return ordersRepository.findAll();
+    }
+
+    @GetMapping("dto/all")
+    public Iterable<OrderDTO> getAllOrderDTOs(){
+        log.info("OrdersController.getAllOrderDTOs");
+        return orderService.getAllOrderDTOs();
     }
 
     @GetMapping("all/customer/{customerId}")

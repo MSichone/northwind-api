@@ -23,4 +23,10 @@ public class ProductController {
         log.info("ProductController.getAllProducts");
         return productService.getAllProducts();
     }
+
+    @GetMapping("categories")
+    public Iterable<String> getAllCategoriesFromProducts(){
+        log.info("ProductController.getAllCategoriesFromProducts");
+        return productService.getCategoriesFromProducts();
+    }
 }

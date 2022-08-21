@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class OrderService {
@@ -35,5 +36,12 @@ public class OrderService {
         return ordersRepository.findAllByCustomer(customer);
     }
 
+    public List<OrderDTO> getAllOrderDTOs(){
+        log.info("OrderService.getAllOrderDTOs");
+        return getAllOrders()
+                .stream()
+                .map(OrderDTO::map)
+                .collect(Collectors.toList());
+    }
 
 }

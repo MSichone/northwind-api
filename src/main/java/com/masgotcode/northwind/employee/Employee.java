@@ -9,4 +9,5 @@ import javax.persistence.*;
 @Entity(name = "Employee")
 @Table(name = "employees")
 public class Employee extends Contact {
+
 }

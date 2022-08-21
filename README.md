@@ -25,7 +25,8 @@ The following frameworks and libraries are used.
 
 [Spring Boot](https://spring.io/projects/spring-boot)  
 [Spring Data](https://spring.io/projects/spring-data)  
-[Lombok](https://projectlombok.org/)  
+
+
 [H2](https://www.h2database.com/)  
 [Springdoc-openapi](https://springdoc.org/)  
 
